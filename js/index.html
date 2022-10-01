@@ -1,0 +1,64 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+    const num = prompt ('Какое число я загадал. Это число среди 1-10')
+
+    if (num < 10) {
+        console.log('Мало');
+    }   else if(num > 10) {
+        console.log('Слишком много');
+    }   else {
+        console.log('Правильно');
+    }
+
+
+    let nameData = 'Expovision'
+    let passwordData = '999222';
+
+    let name = prompt('Логин?');
+    let password = promt('Пароль?');
+
+    if(nameData === name && passwordData === password){
+        console.log('Добро пожаловать!');
+    }
+
+    else{
+        console.log('Неправильно');
+    }
+
+    let code = ''
+
+
+    switch(code){
+    case('html'): 
+    console.log('html');
+    break;
+    
+    case('css'): 
+    console.log('css');
+    break;
+    
+    case('js'): 
+    console.log('js');
+    break;
+    
+    case('react'): 
+    console.log('react');
+
+    default:
+    console.log('default');
+}
+    
+    </script>
+</body>
+</html>
