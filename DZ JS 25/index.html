@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="full" id="full">
+            <div class="title">
+                Международная IT-компания, предлагающая услуги в сфере разработки программного обеспечения, обучения IT-специалистов и продвижения начинающих проектов
+            </div>
+        </div>
+
+        <div class="little">
+            <div class="little-items" id="item-1">
+                <div class="little-img">
+                    <img src="https://expovision.tech/img/bg.jpg" alt=""/>
+                </div>
+                <div class="little-title">
+                    Международная IT-компания, предлагающая услуги в сфере разработки программного обеспечения, обучения IT-специалистов
+                </div>
+            </div>
+            <div class="little-items" id="item-2">
+                <div class="little-img">
+                    <img src="https://expovision.tech/img/aksel.png" alt=""/>
+                </div>
+                <div class="little-title">
+                    Получи необходимые знания и навыки для успешного старта, прокачай свой стартап по лучшим мировым практикам.
+                </div>
+            </div>
+            <div class="little-items" id="item-3">
+                <div class="little-img">
+                    <img src="https://expovision.tech/img/bg-news.png" alt=""/>
+                <div class="little-title">
+                    Разработчик IOS: зарплата, карьера, где учиться, куда пойти работать и где бичевать
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+
+        let item_1 = document.getElementById('item-1')
+        let item_2 = document.getElementById('item-2')
+        let item_3 = document.getElementById('item-3')
+
+        let full = document.getElementById('full')
+
+        item_1.onclick = active;
+        item_2.onclick = active;
+        item_3.onclick = active;
+
+        item_1.addEventListener('click', toggle)
+        item_2.addEventListener('click', toggle)
+        item_3.addEventListener('click', toggle)
+
+        function active() {
+            item_1.classList.remove('active')
+            item_2.classList.remove('active')
+            item_3.classList.remove('active')
+
+            this.classList.add('active')
+        }
+
+        function toggle() {
+            let src = this.firstElementChild.firstElementChild.src;
+            let text = this.lastElementChild.innerHTML;
+
+            full.style.backgroundImage = `url(${src})`
+            full.firstElementChild.innerHTML = text
+        }
+
+    
+    </script>
+
+
+
+
+</body>
+</html>
